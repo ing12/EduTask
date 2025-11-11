@@ -1,0 +1,156 @@
+body {
+    background-color: #fcf8fc;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+/* === NAVBAR === */
+.custom-navbar {
+    background-color: #c6c19b;
+    border-radius: 0 0 20px 20px;
+}
+
+.logo-img {
+    width: 150px;
+}
+
+.nav-link {
+    color: #2c2c2c !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #7a5c2e !important;
+}
+
+/* Estilos para el botón hamburguesa (Agregado) */
+.navbar-toggler {
+    border: none;
+    /* Quita el borde */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    /* Quita el 'outline' azul al hacer clic */
+}
+
+
+/* === BUSCADOR === */
+.buscador {
+    background-color: #d8d5b8;
+    border-radius: 25px;
+    padding: 8px 15px;
+    max-width: 500px;
+}
+
+.btn-search {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* === CARD === */
+.custom-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: #f27267;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.avatar {
+    background: white;
+    color: #f27267;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.card-image {
+    height: 100px;
+    background-color: #e6e3ea;
+    border-radius: 8px;
+}
+
+.btn-custom {
+    background-color: #f27267;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 14px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #d15c52;
+}
+
+/* === LATERAL === */
+.entregas,
+.comentarios {
+    background-color: #f6f3e1;
+    border-radius: 15px;
+}
+
+.entregas h2,
+.comentarios h2 {
+    color: #705e2b;
+    font-size: 20px;
+}
+
+.entregas li {
+    background-color: #f0ece2;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.entregas li:hover {
+    background-color: #e2dcc8;
+}
+
+.entregas span {
+    color: gray;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .custom-card {
+        width: 100%;
+    }
+
+    .buscador {
+        max-width: 100%;
+    }
+
+    .entregas,
+    .comentarios {
+        text-align: center;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(89,61,8,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
