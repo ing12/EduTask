@@ -3,7 +3,7 @@
 <head>
 
 <?php 
-require_once '../includes/navar_docente.php';
+require_once '../includes/navbar_docente.php';
 ?>
 
 </head>
@@ -96,3 +96,4 @@ require_once '../includes/navar_docente.php';
     </main>
 </body>
 </html>
+
