@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>
+<?php
+require_once 'includes/navbar_docente.php';
+?>
+</head>
+<body>
+
+  <div class="card p-4 text-center">
+    <div class="logo mb-3">
+
+      <img src="assets/img/logo_index.png" alt="Logo EduTask">
+    </div>
+    <form>
+      <div class="mb-3 text-start">
+        <label for="email" class="form-label">Correo Electrónico</label> 
+        <input type="email" class="form-control" id="email" placeholder="Ejemplo@email.com" required>
+      </div>
+
+      <div class="mb-2 text-start">
+        <label for="password" class="form-label">Contraseña</label> 
+        <input type="password" class="form-control" id="password" placeholder="Mínimo 8 caracteres" minlength="8" required> 
+
+      <div class="text-end mb-3">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <button type="submit" class="btn btn-brown w-100 mb-3">Iniciar Sesión</button> 
+    </form>
+    <div class="divider"><span>o</span></div>
+    <button class="btn google-btn w-100 d-flex align-items-center justify-content-center mb-3">
+      <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google"> <!-- Ícono de Google -->
+      Continuar con Google
+    </button>
+
+    <p class="mb-0">¿No tienes una cuenta? <a href="#">Regístrate</a></p> 
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
