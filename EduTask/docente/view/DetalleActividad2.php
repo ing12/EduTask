@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Curso</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="./Assets/bootstrap/css/bootstrap.min.css">
-    <script src="./Assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../../Assets/css/buscar_curso1.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+  <?php
+    require_once '../../includes/navbar_docente.php'
+  ?>
 </head>
 <body>
     <button id="menu-toggle">
@@ -73,6 +68,6 @@
     </div>
 
 </div>
-    <script src="../js/buscar_curso1.js"></script>
+    <script src="../js/DetalleActividad2.js"></script>
 </body>
 </html>
