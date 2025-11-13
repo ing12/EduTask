@@ -1,0 +1,771 @@
+/*=================================================================
+  BASE Y PALETA (DE Puntuacion.css)
+=================================================================*/
+:root {
+    --color-olive: #BFBD99;      /* Fondo del Header */
+    --color-beige: #F2F1DC;      /* Fondo de las Cards de tareas */
+    --color-brown: #593D08;      /* Color principal de texto */
+    --color-terracotta: #D95F43; /* Acentos oscuros (Rojo/Naranja) */
+    --color-salmon: #F28D77;     /* Acentos claros (Salmón) */
+    --color-lila-soft: #E0D8F0;  /* Color suave para iconos de tareas */
+    --color-purple-accent: #6f42c1; /* Acento morado para iconos */
+}
+
+/* ESTILOS GENERALES*/
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #FDFDFD; 
+    color: var(--color-brown);
+}
+
+/* Clases de utilidad rápidas si se necesitan en el HTML */
+.text-brown { color: var(--color-brown) !important; }
+.text-terracotta { color: var(--color-terracotta) !important; }
+.bg-olive { background-color: var(--color-olive) !important; }
+.bg-beige { background-color: var(--color-beige) !important; }
+
+/*=================================================================
+  HEADER / NAVBAR (DE Puntuacion.css)
+=================================================================*/
+.navbar-custom {
+    background-color: var(--color-olive);
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo-img {
+    height: 100px; 
+    width: auto;  
+    transition: transform 0.3s ease;
+}
+.logo-img:hover {
+    transform: scale(1.05); 
+}
+
+.nav-link {
+    color: var(--color-brown) !important;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: opacity 0.3s ease;
+}
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.user-icon {
+    font-size: 1.8rem;
+    color: var(--color-purple-accent);
+    transition: transform 0.2s ease;
+}
+.user-icon:hover {
+    transform: scale(1.1);
+}
+
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(89,61,8,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/*=================================================================
+  CONTENIDO PRINCIPAL (DE Puntuacion.css)
+=================================================================*/
+.main-content {
+    padding: 2rem 5%;
+    min-height: 80vh; 
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--color-brown);
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+.back-link:hover {
+    color: var(--color-terracotta);
+}
+.back-link i {
+    margin-right: 8px;
+}
+
+/* BANNER DEL CURSO (DE Puntuacion.css)*/
+.course-banner {
+    background: linear-gradient(135deg, #a8a8a8 0%, #cfcfcf 100%);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    margin: 0.5rem 0 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.2);
+}
+.course-banner h2 {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.banner-decoration {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%) rotate(-15deg);
+    opacity: 0.08;
+    font-size: 12rem;
+    color: #000;
+    pointer-events: none; 
+}
+
+.badge-custom {
+    background-color: rgba(255,255,255,0.85);
+    color: #444;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* LISTA DE TAREAS (DE Puntuacion.css y cssactividad.css)*/
+.unit-title {
+    color: var(--color-brown);
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+.unit-subtitle {
+     color: var(--color-terracotta);
+     font-size: 0.95rem;
+     font-weight: 600;
+     margin-bottom: 1.5rem;
+}
+
+.task-card {
+    background-color: var(--color-beige);
+    border: none;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex; /* Cambiado de 'flex-direction: row' a 'display: flex' */
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.task-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(89, 61, 8, 0.1); 
+}
+
+.task-icon-left {
+    background-color: var(--color-lila-soft);
+    color: var(--color-purple-accent);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0; 
+}
+
+.task-info {
+    flex-grow: 1;
+    padding-right: 1rem;
+}
+.task-title {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--color-brown);
+}
+.task-subtitle {
+    font-size: 0.9rem;
+    color: #6c757d; 
+}
+
+.task-grade {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-brown);
+    margin-right: 2rem;
+    white-space: nowrap; 
+}
+
+.task-decoration-right {
+    color: #d1c7c7;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+}
+.decoration-icon-sm { font-size: 0.8rem; }
+.decoration-icon-md { font-size: 1rem; }
+
+/*=================================================================
+  ESTILOS DASHBOARDS (Docente/Estudiante)
+=================================================================*/
+
+/* Buscador Unificado */
+.search-box, .buscador {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-olive);
+    border-radius: 15px;
+    padding: 8px 20px;
+    width: 50%;
+    margin: 1.5rem auto 2.5rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(89, 61, 8, 0.05);
+}
+.search-box input, .buscador input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--color-brown);
+    font-weight: 600;
+}
+.search-box input::placeholder, .buscador input::placeholder {
+    color: var(--color-brown);
+    opacity: 0.7;
+}
+.search-box button, .btn-search {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Tarjeta de Curso Unificada (.custom-card) */
+.custom-card {
+    background-color: #fdfaf0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.custom-card .card-header {
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* !! CLASES ESPECIALES para resolver conflicto de color !! */
+.card-header-docente {
+    background-color: var(--color-terracotta); /* #D95F43 */
+}
+.card-header-docente .avatar {
+    color: var(--color-terracotta);
+}
+
+.card-header-estudiante {
+    background-color: var(--color-salmon); /* #F28D77 */
+}
+.card-header-estudiante .avatar {
+    color: var(--color-salmon);
+}
+/*-----------------------------------------------------------*/
+
+
+.custom-card .avatar {
+    background-color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    padding: 6px 10px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-card .card-body {
+    padding: 20px;
+    color: #444;
+}
+
+.card-image {
+    height: 100px;
+    background-color: var(--color-beige);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.custom-card h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-brown);
+    margin-bottom: 0.5rem;
+}
+.custom-card .clave, .custom-card .info {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.25rem;
+}
+
+
+/* Botones de Card (Docente/Estudiante) */
+.btn-ver, .btn-custom {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-ver {
+    background-color: var(--color-terracotta); /* Botón Docente */
+}
+.btn-custom {
+    background-color: var(--color-salmon); /* Botón Estudiante */
+}
+.btn-ver:hover {
+    background-color: #cf5549;
+}
+.btn-custom:hover {
+    background-color: #d15c52;
+}
+
+/* Panel Lateral (Docente/Estudiante) */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box, .entregas, .comentarios {
+    background-color: var(--color-beige);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.box h3, .entregas h2, .comentarios h2 {
+    margin-top: 0;
+    color: var(--color-brown);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.btn-small {
+    margin-top: 10px;
+    background-color: var(--color-olive);
+    border: none;
+    color: var(--color-brown);
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-small.red {
+    background-color: var(--color-terracotta);
+    color: white;
+}
+.btn-small:hover {
+    opacity: 0.9;
+}
+
+.entregas li {
+    background-color: #fff;
+    border: 1px solid var(--color-olive);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+.entregas li:hover {
+    background-color: #f7f7f0;
+}
+.entregas span {
+    color: var(--color-terracotta);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/*=================================================================
+  ESTILOS VISTA DE ACTIVIDAD (de cssactividad.css)
+=================================================================*/
+.title-page {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-brown);
+    margin-bottom: 25px;
+    background: none;
+    border: none;
+}
+.card-materia {
+    background: linear-gradient(180deg, #8a8a8a, #5e5e5e);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card-materia h4 {
+    font-weight: 600;
+}
+.tag {
+    display: inline-block;
+    background-color: var(--color-olive);
+    color: var(--color-brown);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
+.sidebar .btn-actividad {
+    background-color: var(--color-terracotta);
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    border-radius: 8px;
+    width: 100%;
+    padding: 0.75rem;
+}
+.sidebar .btn-actividad:hover {
+    background-color: var(--color-brown);
+}
+
+/*=================================================================
+  ESTILOS FORMULARIO (de crear_actividad_2.css)
+=================================================================*/
+.form-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+.form-card .form-control,
+.form-card .form-select {
+    background-color: var(--color-beige);
+    border: 1px solid var(--color-olive);
+    border-radius: 6px;
+    padding: 10px;
+    color: var(--color-brown);
+}
+.form-card label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-brown);
+}
+.obligatorio {
+    font-size: 0.75rem;
+    color: var(--color-terracotta);
+}
+.btn-crear {
+    background-color: var(--color-brown);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.btn-crear:hover {
+    background-color: #3a2905; /* Un poco más oscuro que --color-brown */
+}
+
+/*=================================================================
+  ESTILOS LAYOUT LATERAL (de buscar_curso1.css)
+=================================================================*/
+#sidebar {
+  width: 130px;
+  background-color: var(--color-lila-soft);
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 999;
+}
+#sidebar.active {
+  left: 0;
+}
+.sidebar-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.sidebar-item:hover {
+  background-color: #d1c7e6; /* Ligeramente más oscuro que lila-soft */
+}
+.sidebar-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.sidebar-label {
+  font-size: 14px;
+}
+#menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 47px;
+  z-index: 1000;
+  background-color: transparent;
+  border: none;
+  font-size: 34px;
+  transition: left 0.7s ease;
+}
+#breadcrumb {
+  position: fixed;
+  top: 15px;
+  left: 160px; 
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: #333;
+  z-index: 1000;
+}
+.breadcrumb-arrow {
+  font-size: 25px;
+  margin-right: 5px;
+}
+.header-actions {
+    position: fixed; 
+    top: 25px;    
+    right: 30px;   
+    z-index: 1001; 
+    display: flex;
+    gap: 20px;   
+}
+.action-icon {
+    font-family: 'Material Icons Outlined'; 
+    font-size: 24px; 
+    color: #333;     
+    cursor: pointer;
+}
+#main-content {
+    margin-left: 130px; 
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    padding-top: 60px; 
+}
+#sidebar.active ~ #main-content {
+    margin-left: 130px; 
+}
+
+#activity-info-container {
+    background-color: #fff; 
+    border-radius: 15px;
+    padding: 30px;
+    display: flex; 
+    margin-bottom: 40px;
+    max-width: 1300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+}
+.activity-icon-placeholder {
+    width: 150px; 
+    height: 150px;
+    background-color: var(--color-lila-soft); 
+    border-radius: 10px;
+    margin-right: 30px;
+    flex-shrink: 0; 
+}
+.activity-details {
+    flex-grow: 1;
+}
+.activity-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--color-brown);
+}
+.activity-dates {
+    font-size: 14px;
+    color: var(--color-terracotta);
+    margin-bottom: 15px;
+}
+.activity-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+#upload-area-container h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--color-brown); 
+    text-align: center;
+}
+.drop-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+.upload-icon-placeholder {
+    width: 150px; 
+    height: 150px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    border: 2px dashed var(--color-lila-soft); 
+}
+.plus-icon {
+    font-size: 60px;
+    color: var(--color-purple-accent); 
+    font-weight: 100;
+}
+.btn-submit {
+    padding: 12px 30px;
+    background-color: var(--color-brown);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(112, 66, 20, 0.3);
+    transition: background-color 0.2s;
+}
+.btn-submit:hover {
+    background-color: var(--color-purple-accent);
+    box-shadow: 0 4px 8px rgba(106, 27, 154, 0.3);
+}
+#main-content.shifted {
+    margin-left: 130px; 
+}
+
+/*=================================================================
+  MEDIA QUERIES FINALES (Combinados)
+=================================================================*/
+@media (max-width: 992px) {
+    .sidebar {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .course-banner {
+        padding: 2rem;
+    }
+    .banner-decoration {
+        font-size: 8rem;
+        right: -10%;
+    }
+    .task-grade {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    .custom-card {
+        width: 100%;
+    }
+    .buscador, .search-box {
+        max-width: 100%;
+        width: 100%;
+    }
+    .entregas, .comentarios {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-custom {
+        padding: 1rem; 
+    }
+    .task-card {
+        flex-wrap: wrap; 
+        padding: 1.2rem;
+    }
+    .task-icon-left {
+        margin-bottom: 1rem; 
+    }
+    .task-info {
+        width: calc(100% - 70px); 
+        margin-bottom: 1rem;
+    }
+    .task-grade {
+        width: 100%;
+        text-align: right; 
+        margin-right: 0;
+        margin-top: 0.5rem;
+        order: 3; 
+    }
+    .task-decoration-right {
+        display: none; 
+    }
+}
+
+@media (max-width: 700px) {
+    /* Media query específico de buscar_curso1 */
+    #main-content {
+        margin-left: 0 !important; 
+        padding: 10px; 
+        padding-top: 50px; 
+    }
+    #menu-toggle {
+        left: 10px; 
+        top: 10px; 
+    }
+    #breadcrumb {
+        left: 50px; 
+        top: 10px; 
+        font-size: 14px; 
+        padding-right: 80px; 
+    }
+    .breadcrumb-text {
+      text-align: center;
+    }
+    .header-actions {
+        top: 10px; 
+        right: 10px;
+        gap: 15px;
+    }
+    #activity-info-container {
+        max-width: 100%; 
+        margin-left: 0; 
+        padding: 15px; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .activity-icon-placeholder {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 15px; 
+    }
+    .activity-details {
+        max-width: 100%;
+    }
+    .activity-title {
+        font-size: 22px;
+        text-align: center;
+    }
+    .activity-description {
+        font-size: 14px;
+    }
+    .drop-zone {
+        max-width: 100%; 
+    }
+    .upload-icon-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+    .plus-icon {
+        font-size: 50px;
+    }
+}
