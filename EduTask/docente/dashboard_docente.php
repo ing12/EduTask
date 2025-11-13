@@ -13,11 +13,6 @@ require_once '../includes/navbar_docente.php';
         <div class="logo">
             <img src="../assets/img/logo.png" alt="Logo EduTask">
         </div>
-        <nav class="menu">
-            <a href="#">Inicio</a>
-            <a href="#">Mis Cursos</a>
-            <a href="#">Actividades</a>
-        </nav>
         <div class="perfil">
             <i class="bi bi-person"></i>
         </div>
@@ -46,7 +41,7 @@ require_once '../includes/navbar_docente.php';
                         <p><strong>Nombre Materia</strong></p>
                         <p>Clave</p>
                         <p>Semestre_Mate<br>Créditos</p>
-                        <button class="btn-ver">Mirar →</button>
+                        <a href="view/actividad_1.php" class="btn-ver">Mirar →</a>
                     </div>
                 </div>
 
@@ -60,7 +55,7 @@ require_once '../includes/navbar_docente.php';
                         <p><strong>Nombre Materia</strong></p>
                         <p>Clave</p>
                         <p>Semestre_Mate<br>Créditos</p>
-                        <button class="btn-ver">Mirar →</button>
+                        <a href="view/actividad_1.php" class="btn-ver">Mirar →</a>
                     </div>
                 </div>
 
@@ -74,7 +69,7 @@ require_once '../includes/navbar_docente.php';
                         <p><strong>Nombre Materia</strong></p>
                         <p>Clave</p>
                         <p>Semestre_Mate<br>Créditos</p>
-                        <button class="btn-ver">Mirar →</button>
+                        <a href="view/actividad_1.php" class="btn-ver">Mirar →</a>
                     </div>
                 </div>
             </div>
@@ -96,4 +91,3 @@ require_once '../includes/navbar_docente.php';
     </main>
 </body>
 </html>
-
